@@ -4,16 +4,11 @@
     <title>フォント変更</title>
     <style>
       .font-item {
-        font-size: 50px;
+        font-size: 10rem;
         margin-top: 10px;
       }
-      .cooper {
-        font-family: cooper-black-std, serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      .caliban {
-        font-family: caliban-std, sans-serif;
+      .batuphat {
+        font-family: batuphat, sans-serif;
         font-weight: 400;
         font-style: normal;
       }
@@ -21,14 +16,28 @@
         font-family: ganache, sans-serif;
         font-weight: 400;
         font-style: normal;
+        font-size: 11rem;
+        margin-top: -6rem;
+        margin-bottom: -8rem;
       }
-      .harman {
-        font-family: harman-sans, sans-serif;
+      .cooper {
+        font-family: cooper-black-std, serif;
         font-weight: 400;
         font-style: normal;
       }
-      .batuphat {
-        font-family: batuphat, sans-serif;
+      .cooper-big {
+        font-size:9rem;
+      }
+      .caliban {
+        font-family: caliban-std, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:18rem;
+        margin-top: -4rem;
+        margin-bottom: -2rem;
+      }
+      .harman {
+        font-family: harman-sans, sans-serif;
         font-weight: 400;
         font-style: normal;
       }
@@ -40,17 +49,17 @@
     <link rel="stylesheet" href="https://use.typekit.net/bly6pyi.css">
   </head>
   <body>
-    <div>
+    <div style="font-size: 3rem;">
       <label for="input">名前を入力:</label>
-      <input type="text" id="input" oninput="updateOutput()" />
+      <input type="text" id="input" style="height:3rem; width:20rem;" oninput="updateOutput()" />
     </div>
     <div id="fontList">
-      <div class="font-item batuphat" id="batuphat">batuphat</div>
-      <div class="font-item ganache" id="ganache">ganache</div>
-      <div class="font-item cooper">cooper</div>
-      <div class="font-item cooper" id="cooper">COOPER</div>
-      <div class="font-item caliban">caliban</div>
-      <div class="font-item harman">harman</div>
+      <div class="font-item batuphat" id="batuphat">Moca</div>
+      <div class="font-item ganache" id="ganache">Moca</div>
+      <div class="font-item cooper">moca</div>
+      <div class="font-item cooper cooper-big" id="cooper">MOCA</div>
+      <div class="font-item caliban">moca</div>
+      <div class="font-item harman">moca</div>
     </div>
   </body>
 </html>
