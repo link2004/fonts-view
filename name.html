@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>フォント変更</title>
+    <style>
+      .font-item {
+        font-size: 50px;
+        margin-top: 10px;
+      }
+      .cooper {
+        font-family: cooper-black-std, serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .caliban {
+        font-family: caliban-std, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .ganache {
+        font-family: ganache, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .harman {
+        font-family: harman-sans, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .batuphat {
+        font-family: batuphat, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "batuphat";
+        src: url("./font/Batuphat\ Script.otf") format("truetype");
+      }
+    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/bly6pyi.css">
+  </head>
+  <body>
+    <div>
+      <label for="input">名前を入力:</label>
+      <input type="text" id="input" oninput="updateOutput()" />
+    </div>
+    <div id="fontList">
+      <div class="font-item batuphat" id="batuphat">batuphat</div>
+      <div class="font-item ganache" id="ganache">ganache</div>
+      <div class="font-item cooper">cooper</div>
+      <div class="font-item cooper" id="cooper">COOPER</div>
+      <div class="font-item caliban">caliban</div>
+      <div class="font-item harman">harman</div>
+    </div>
+  </body>
+</html>
+<script>
+function updateOutput() {
+  const input = document.getElementById("input").value;
+  const fonts = document.querySelectorAll("#fontList .font-item");
+  const batuphat = document.getElementById("batuphat");
+  const ganache = document.getElementById("ganache");
+  const copper = document.getElementById("cooper");
+  
+  fonts.forEach(font => {
+    font.textContent = input;
+  });
+
+  batuphat.textContent = input.charAt(0).toUpperCase() + input.slice(1);
+  ganache.textContent = input.charAt(0).toUpperCase()  + input.slice(1);
+  cooper.textContent = input.toUpperCase();
+}
+
+</script>
