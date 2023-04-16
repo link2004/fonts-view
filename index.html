@@ -70,6 +70,7 @@ function updateOutput() {
   const fonts = document.querySelectorAll("#fontList .font-item");
   const batuphat = document.getElementById("batuphat");
   const ganache = document.getElementById("ganache");
+  const caliban = document.getElementById("caliban");
   const copper = document.getElementById("cooper");
   
   fonts.forEach(font => {
@@ -78,7 +79,7 @@ function updateOutput() {
 
   batuphat.textContent = input.charAt(0).toUpperCase() + input.slice(1);
   ganache.textContent = input.charAt(0).toUpperCase()  + input.slice(1);
-  cariban.textContent = input.charAt(0).toUpperCase()  + input.slice(1);
+  caliban.textContent = input.charAt(0).toUpperCase()  + input.slice(1);
   cooper.textContent = input.toUpperCase();
 }
 
