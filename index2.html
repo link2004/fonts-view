@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>フォント変更</title>
+    <style>
+      .font-item {
+        font-size: 10rem;
+        margin-top: 2rem;
+        margin-left: 3rem;
+      }
+      .caflisch {
+        font-family: caflisch-script-pro, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      .filmotype {
+        font-family: filmotype-lacrosse, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .blithe {
+        font-family: blithe, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .adventures{
+        font-family: adventures-unlimited, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/nin1rkr.css">
+  </head>
+  <body>
+    <div style="font-size: 3rem;">
+      <label for="input">名前を入力:</label>
+      <input type="text" id="input" style="height:3rem; width:20rem;font-size:3rem;" oninput="updateOutput()" />
+    </div>
+    <div id="fontList">
+      <div class="font-item caflisch" id="caflisch">Smile</div>
+      <div class="font-item filmotype" id="filmotype">Smile</div>
+      <div class="font-item blithe" id="blithe">Smile</div>
+      <div class="font-item adventures" id="adventures">Smile</div>
+    </div>
+  </body>
+</html>
+<script>
+function updateOutput() {
+  const input = document.getElementById("input").value;
+  const fonts = document.querySelectorAll("#fontList .font-item");
+  
+  fonts.forEach(font => {
+    font.textContent = input.charAt(0).toUpperCase()+input.slice(1);
+  });
+}
+
+</script>
